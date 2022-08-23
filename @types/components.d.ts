@@ -7,7 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AboutDialog: typeof import('./../src/components/overlay/AboutDialog.vue')['default']
+    AboutModal: typeof import('./../src/components/modal/AboutModal.vue')['default']
     AppBar: typeof import('./../src/components/app/AppBar.vue')['default']
+    AppModal: typeof import('./../src/components/app/AppModal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

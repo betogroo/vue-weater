@@ -9,7 +9,10 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true }),
     Components({
-      dirs: [path.resolve(__dirname, 'src/components/app')],
+      dirs: [
+        path.resolve(__dirname, 'src/components/app'),
+        path.resolve(__dirname, 'src/components/overlay')
+      ],
       dts: path.resolve(__dirname, '@types/components.d.ts')
     })
   ]
