@@ -1,8 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+const dialogActive = ref(false)
+const toggleDialog = () => {
+  dialogActive.value = !dialogActive.value
+}
+</script>
 
 <template>
-  <v-app class="bg-indigo-lighten-4">
-    <AppBar />
+  <v-app class="bg-weather-primary">
+    <AppBar @toggle-dialog="toggleDialog" />
+    <AboutDialog :dialogActive="dialogActive" @on-close-dialog="toggleDialog" />
     <v-main>
       <RouterView />
     </v-main>
